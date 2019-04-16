@@ -3,14 +3,14 @@
 Projeto criado utilizando Spring-boot, Maven, MongoDB e Docker
   
 Rotas:  
-- "/pontos_de_apoio" :  
+- "/ms-places" :  
     - get: retorna uma lista(json) com todos os pontos  
     - post: insere um novo ponto enviado em formato json pelo body  
- - "/pontos_de_apoio/{id}"
+ - "/ms-places/{id}"
     - get: retorna o ponto(json) referente ao id
     - put: atualiza o ponto referente ao id, com o json enviado pelo body
     - delete: remove o ponto referente ao id  
- - "/pontos_de_apoio/q/{campo}={param}"
+ - "/ms-places/q/{campo}={param}"
     - get: retorna uma lista resultante da query realizada sobre o {campo} buscando o {param}  
       Ex: "/pontos_de_apoio/q/cidade=juiz" retorna uma lista com todas os PDAs que contem 'juiz' no campo cidade  
       Campos suportados: rua, bairro, cidade, cep
