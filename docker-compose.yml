@@ -1,0 +1,22 @@
+version: "3.0"
+
+services:
+  api-pda:
+    image: api-pda:latest
+    container_name: pdacontainer
+    build: .
+    #environment:
+    #  - MONGO_URI=mongodb://db:27017/ufjf
+    ports:
+      - "8080:8080"
+
+    depends_on:
+      - db
+  
+  db:
+    image: mongo
+    container_name: mongocontainer
+    ports: 
+      - "27017:27017"
+
+    
